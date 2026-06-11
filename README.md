@@ -6,6 +6,16 @@ Interactive Power BI dashboard analyzing production performance, well efficiency
 
 The objective of this project is to analyze oil and gas production performance across wells and identify operational trends affecting field output. Using daily production data from the Volve field, the solution transforms raw operational data into a dimensional model and presents key production metrics through interactive Power BI dashboards.
 
+## Dashboard Files
+
+### Power BI Dashboard
+
+[Download PBIX File](Oil_Gas_Production_Performance_Dashboard.pbix)
+
+### Dashboard PDF
+
+[View Dashboard PDF](Oil_Gas_Production_Performance_Dashboard.pdf)
+
 ## Tools & Technologies
 
 - PostgreSQL
