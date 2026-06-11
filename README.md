@@ -8,116 +8,148 @@ The objective of this project is to analyze oil and gas production performance a
 
 ## Dashboard Files
 
-- [Power BI Dashboard (.pbix)](Oil_Gas_Production_Performance_Dashboard.pbix)
-- [Dashboard PDF (.pdf)](Oil_Gas_Production_Performance_Dashboard.pdf)
+* [Power BI Dashboard (.pbix)](Oil_Gas_Production_Performance_Dashboard.pbix)
+* [Dashboard PDF (.pdf)](Oil_Gas_Production_Performance_Dashboard.pdf)
+
+## SQL Scripts
+
+The data model was built in PostgreSQL using SQL for staging, dimensional modeling, and fact table creation.
+
+* [01_create_raw_daily_production.sql](01_create_raw_daily_production.sql) – Raw staging table creation
+* [02_create_dim_well.sql](02_create_dim_well.sql) – Well dimension table creation
+* [03_create_dim_date.sql](03_create_dim_date.sql) – Date dimension table creation
+* [04_create_fact_production.sql](04_create_fact_production.sql) – Production fact table creation and population
 
 ## Tools & Technologies
 
-- PostgreSQL
-- SQL
-- Power BI
-- DAX
-- Power Query
-- Data Modeling
+* PostgreSQL
+* SQL
+* Power BI
+* DAX
+* Power Query
+* Data Modeling
 
 ## Dataset
 
-**Source:** [Volve Daily Production Dataset (Kaggle)](https://www.kaggle.com/datasets/lamyalbert/volve-production-data)
+**Source:** [Volve Production Dataset (Kaggle)](https://www.kaggle.com/datasets/lamyalbert/volve-production-data)
 
-- 15,634 records
-- 24 columns
-- September 2007 – December 2016
-- Daily oil, gas, water production and injection data from the Volve offshore oil field
+* 15,634 records
+* 24 columns
+* September 2007 – December 2016
+* Daily oil, gas, water production and injection data from the Volve offshore oil field
 
 ## Data Model
 
-Star Schema Design:
+A star schema data model was created in PostgreSQL to support analytical reporting and dashboard performance.
 
+### Star Schema Design
+
+```text
 dim_date → fact_production ← dim_well
+```
 
 ### Dimension Tables
 
 **dim_date**
-- Production Date
-- Year
-- Quarter
-- Month
-- Month Name
-- Year-Month
+
+* Production Date
+* Year
+* Quarter
+* Month
+* Month Name
+* Year-Month
 
 **dim_well**
-- Well Name
-- Well Bore Code
-- Field Information
-- Facility Information
+
+* Well Name
+* Well Bore Code
+* Field Information
+* Facility Information
 
 ### Fact Table
 
 **fact_production**
-- Oil Production
-- Gas Production
-- Water Production
-- Water Injection
-- On Stream Hours
-- Pressure Metrics
-- Temperature Metrics
-- Operational Attributes
+
+* Oil Production
+* Gas Production
+* Water Production
+* Water Injection
+* On Stream Hours
+* Pressure Metrics
+* Temperature Metrics
+* Operational Attributes
 
 ## SQL Highlights
 
-- Data Cleaning & Type Conversion
-- Dimensional Modeling
-- Star Schema Design
-- Window Functions
-- CTEs
-- Ranking Analysis
-- Production Trend Analysis
+* Data Cleaning & Type Conversion
+* Dimensional Modeling
+* Star Schema Design
+* Window Functions
+* CTEs
+* Ranking Analysis
+* Production Trend Analysis
+
+### SQL Data Pipeline
+
+```text
+raw_daily_production
+        ↓
+     dim_well
+        ↓
+     dim_date
+        ↓
+  fact_production
+        ↓
+     Power BI
+```
+
+The raw Volve production dataset was imported into PostgreSQL and transformed into a dimensional model using SQL. The SQL layer included data cleaning, type conversion, dimensional modeling, and fact table creation to support analytical reporting in Power BI.
 
 ## Dashboard Pages
 
 ### Executive Overview
 
-- Production KPI scorecards
-- Oil production trends
-- Top producing wells
-- Water production vs injection analysis
+* Production KPI scorecards
+* Oil production trends
+* Top producing wells
+* Water production vs injection analysis
 
 ![Executive Overview](Executive_Overview.png)
 
 ### Well Performance
 
-- Well performance summary
-- Water-to-oil ratio analysis
-- Oil production efficiency comparison
+* Well performance summary
+* Water-to-oil ratio analysis
+* Oil production efficiency comparison
 
 ![Well Performance](Well_Performance.png)
 
 ### Production Diagnostics
 
-- Monthly production trends
-- Production change monitoring
-- Cumulative production tracking
-- Water injection trends
+* Monthly production trends
+* Production change monitoring
+* Cumulative production tracking
+* Water injection trends
 
 ![Production Diagnostics](Production_Diagnostics.png)
 
 ## Key Metrics
 
-- Total Oil Production: 10.04M
-- Total Gas Production: 1.48B
-- Total Water Production: 15.32M
-- Total Water Injection: 30.33M
-- Active Wells: 7
-- Highest Producing Well: 15/9-F-12
+* Total Oil Production: 10.04M
+* Total Gas Production: 1.48B
+* Total Water Production: 15.32M
+* Total Water Injection: 30.33M
+* Active Wells: 7
+* Highest Producing Well: 15/9-F-12
 
 ## Skills Demonstrated
 
-- SQL
-- Data Cleaning
-- Dimensional Modeling
-- Star Schema Design
-- DAX
-- Power BI
-- Data Visualization
-- Business Intelligence Reporting
-- Energy Analytics
+* SQL
+* Data Cleaning
+* Dimensional Modeling
+* Star Schema Design
+* DAX
+* Power BI
+* Data Visualization
+* Business Intelligence Reporting
+* Energy Analytics
