@@ -76,7 +76,7 @@ dim_date → fact_production ← dim_well
 - Top producing wells
 - Water production vs injection analysis
 
-![Executive Overview](IMAGE_LINK_1)
+![Executive Overview](Executive_Overview.png)
 
 ### Well Performance
 
@@ -84,7 +84,7 @@ dim_date → fact_production ← dim_well
 - Water-to-oil ratio analysis
 - Oil production efficiency comparison
 
-![Well Performance](IMAGE_LINK_2)
+![Well Performance](Well_Performance.png)
 
 ### Production Diagnostics
 
@@ -93,7 +93,7 @@ dim_date → fact_production ← dim_well
 - Cumulative production tracking
 - Water injection trends
 
-![Production Diagnostics](IMAGE_LINK_3)
+![Production Diagnostics](Production_Diagnostics.png)
 
 ## Key Metrics
 
