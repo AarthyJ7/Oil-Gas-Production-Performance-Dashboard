@@ -22,11 +22,12 @@ The objective of this project is to analyze oil and gas production performance a
 
 ## Dataset
 
-Source: Volve Daily Production Dataset (Kaggle)
+**Source:** [Volve Daily Production Dataset (Kaggle)](https://www.kaggle.com/datasets/lamyalbert/volve-production-data)
 
 - 15,634 records
 - 24 columns
 - September 2007 – December 2016
+- Daily oil, gas, water production and injection data from the Volve offshore oil field
 
 ## Data Model
 
