@@ -8,13 +8,8 @@ The objective of this project is to analyze oil and gas production performance a
 
 ## Dashboard Files
 
-### Power BI Dashboard
-
-[Download PBIX File](Oil_Gas_Production_Performance_Dashboard.pbix)
-
-### Dashboard PDF
-
-[View Dashboard PDF](Oil_Gas_Production_Performance_Dashboard.pdf)
+- [Power BI Dashboard (.pbix)](Oil_Gas_Production_Performance_Dashboard.pbix)
+- [Dashboard PDF (.pdf)](Oil_Gas_Production_Performance_Dashboard.pdf)
 
 ## Tools & Technologies
 
